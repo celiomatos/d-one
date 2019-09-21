@@ -4,7 +4,7 @@
 
 INSERT INTO oauth.oauth_client(client_id, resource_ids, client_secret, client_scope,
     authorized_grant_types, access_token_validity_seconds, refresh_token_validity_seconds, secret_required)
- VALUES ('admin', 'd_gateway',
+ VALUES ('admin', 'd_one',
     /*admin1234*/'$2a$10$zelII7t6Duv2H.JEF2x9RuNseSLRRf90rC6PZj0ILhHtqSvJnUWs6',
     'read,write', 'password,authorization_code,refresh_token,implicit', 2592000, 2593800, true);
 

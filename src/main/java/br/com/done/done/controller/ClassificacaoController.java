@@ -9,7 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/classificacoes")
+@RequestMapping("/api/classificacoes")
 public class ClassificacaoController {
 
     @Autowired

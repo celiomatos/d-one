@@ -50,7 +50,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .useDefaultResponseMessages(false);
 
         ApiInfo apiInfo = new ApiInfoBuilder()
-                .title("DGateway")
+                .title("DOne")
                 .version("1.0.00")
                 .build();
         docket.apiInfo(apiInfo);
