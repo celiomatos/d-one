@@ -208,4 +208,13 @@ public class ParametroService {
         parametroRepository.save(p.get());
     }
 
+    public String getParametroRepasse() {
+        String result = null;
+        Optional<Parametro> p = parametroRepository.findById(MyConstant.REPASSE);
+        if (p.isPresent()) {
+            result = getMesAno(p.get(), 1);
+        }
+        return result;
+    }
+
 }

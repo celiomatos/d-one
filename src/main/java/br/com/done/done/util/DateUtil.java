@@ -63,4 +63,8 @@ public class DateUtil {
         return new java.sql.Date(date.getTime());
     }
 
+    public static String formatDate(Date date) {
+        return SDFD.format(date);
+    }
+
 }

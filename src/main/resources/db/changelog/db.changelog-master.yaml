@@ -13,3 +13,7 @@ databaseChangeLog:
     file: db/changelog/migrations/db.changelog-scraper-04.sql
 - include:
     file: db/changelog/migrations/db.changelog-main-02.sql
+- include:
+    file: db/changelog/migrations/db.changelog-main-01.sql
+- include:
+    file: db/changelog/migrations/db.changelog-scraper-05.sql

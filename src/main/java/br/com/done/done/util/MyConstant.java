@@ -10,4 +10,6 @@ public class MyConstant {
     public static final short ESFERA_UNIAO = 1;
     public static final short ESFERA_ESTADO = 2;
 
+    public static final Long REPASSE = 1L;
+
 }
