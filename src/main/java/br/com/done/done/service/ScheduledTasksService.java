@@ -20,6 +20,9 @@ public class ScheduledTasksService {
     @Autowired
     private RepasseService repasseService;
 
+    @Autowired
+    private RepasseFederalService repasseFederalService;
+
     /**
      * second, minute, hour, day of month, month, day(s) of week
      */
@@ -33,28 +36,33 @@ public class ScheduledTasksService {
         pagamentoService.updateBySchedule(false);
     }
 
-    @Scheduled(cron = "10 10 10,16,21 * * *")
+    @Scheduled(cron = "10 10 4,10,16,21 * * *")
     public void empenhoAnoAtual() {
         empenhoService.updateBySchedule(MyConstant.EMPENHO_ANO_ATUAL);
     }
 
-    @Scheduled(cron = "10 10 11,17,22 * * *")
+    @Scheduled(cron = "10 10 5,11,17,22 * * *")
     public void empenhoAnoAnterior() {
         empenhoService.updateBySchedule(MyConstant.EMPENHO_ANOS_ANTERIORES);
     }
 
     @Scheduled(cron = "10 20 * * * *")
-    public void sendDAlertMessage()  {
+    public void sendDAlertMessage() {
         emailService.sendDAlert();
     }
 
     @Scheduled(cron = "10 10 10 * * *")
-    public void sendPaymentMessage()  {
+    public void sendPaymentMessage() {
         emailService.sendPayment();
     }
 
     @Scheduled(cron = "10 10 12,18,23 * * *")
-    public void repasseEstadual()  {
+    public void repasseEstadual() {
         repasseService.updateBySchedule();
+    }
+
+    @Scheduled(cron = "10 10 6,7,13 * * *")
+    public void repasseFederal() {
+        repasseFederalService.updateBySchedule();
     }
 }

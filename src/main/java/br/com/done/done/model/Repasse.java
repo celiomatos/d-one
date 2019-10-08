@@ -25,7 +25,7 @@ public class Repasse implements Serializable {
     private Date referencia;
 
     @JoinColumn(name = "rep_mun_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Municipio municipio;
 
 }

@@ -217,4 +217,13 @@ public class ParametroService {
         return result;
     }
 
+    public String getParametroRepasseFederal() {
+        String result = null;
+        Optional<Parametro> p = parametroRepository.findById(MyConstant.REPASSE_FEDERAL);
+        if (p.isPresent()) {
+            result = getMesAno(p.get(), 2);
+        }
+        return result;
+    }
+
 }

@@ -37,7 +37,7 @@ public class RepasseSiteService {
 
         String mesAno = parametroService.getParametroRepasse();
         // lista de municipios para verificacao
-        List<Municipio> cidades = municipioRepository.findByUfSigla("AM");
+        List<Municipio> cidades = municipioRepository.findByUfSiglaOrderByNome("AM");
 
         if (!cidades.isEmpty()) {
             for (Municipio cidade : cidades) {

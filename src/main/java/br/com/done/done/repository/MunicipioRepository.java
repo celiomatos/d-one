@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface MunicipioRepository extends JpaRepository<Municipio, Long> {
 
-    List<Municipio> findByUfSigla(String sigla);
+    List<Municipio> findByUfSiglaOrderByNome(String sigla);
 }

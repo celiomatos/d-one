@@ -11,5 +11,5 @@ public class MyConstant {
     public static final short ESFERA_ESTADO = 2;
 
     public static final Long REPASSE = 1L;
-
+    public static final Long REPASSE_FEDERAL = 6L;
 }

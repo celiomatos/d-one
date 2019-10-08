@@ -23,11 +23,11 @@ public class Municipio implements Serializable {
     private String nome;
 
     @JoinColumn(name = "mun_cal_id", referencedColumnName = "cal_id")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Calha calha;
 
     @JoinColumn(name = "mun_uf_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Uf uf;
 
     public Municipio(long id) {

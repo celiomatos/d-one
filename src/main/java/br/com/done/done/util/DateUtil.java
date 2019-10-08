@@ -67,4 +67,25 @@ public class DateUtil {
         return SDFD.format(date);
     }
 
+    public static String lastDayMonth(int mes, int ano) {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.YEAR, ano);
+        cal.set(Calendar.MONTH, (mes - 1));
+        cal.set(Calendar.DATE, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
+
+        return sdf.format(cal.getTime());
+    }
+
+    public static Date objToDate(Object obj) {
+        if (obj instanceof java.sql.Timestamp) {
+            java.sql.Timestamp dt = (java.sql.Timestamp) obj;
+            return new Date(dt.getTime());
+        } else {
+            java.sql.Date dt = (java.sql.Date) obj;
+            return new Date(dt.getTime());
+        }
+    }
+
 }
